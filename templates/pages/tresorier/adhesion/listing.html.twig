@@ -1,0 +1,32 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace trésorier</h1>
+	<section id="adhesion-accueil">
+		<h2 class="text-center">Le listing des adhésions</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/tresorier/adhesion/listing.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Trésorier"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des adhésions"</li>
+					</ul>
+				</p>
+				<p>
+					Le listing des adhésions vous fourni une vue d'ensemble de toutes les adhésions disponibles. 
+																									D'un seul coup d'oeil vous aurez accès aux nom et prénom de l'adhérent, au nom de l'association, sa date de souscription, un résumé des paiements 
+																									et les actions disponibles.
+				</p>
+			</div>
+		</section>
+	{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace Administrateur</h1>
+	<section id="admin-compte">
+		<h2 class="text-center">Gestion des rôles utilisateurs</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/admin/ajouter.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Se connecter en tant qu'administrateur</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur l'onglet "Espace référent"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Cliquez sur "Gestion des adhérents"</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							Dans la liste cliquez sur l'icône "Modifier le rôle"</li>
+						<li><img src="{{asset('images/icons/step5.png')}}" alt="">
+							Cochez le rôle</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur "Mettre à jour l'adhérent"</li>
+					</ul>
+				</p>
+				<p class="mt-5">
+					Le changement de rôle est immédiat. Seul l'administrateur a accès à cette fonctionnalité.
+				</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

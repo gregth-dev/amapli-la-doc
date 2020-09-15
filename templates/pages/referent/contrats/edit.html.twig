@@ -1,0 +1,47 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="contrat-accueil">
+		<h2 class="text-center">Modifier un contrat producteur</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/referent/contratproducteur/modifier.mp4')}}" type="video/mp4">
+
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des producteurs"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Cliquez sur "Modifier"</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							modifier les champs du formulaire</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur "mettre à jour"</li>
+					</ul>
+				</p>
+				<p>
+					Les modifications du contrat sont immédiates. Vous pouvez modifier un contrat autant de fois que nécessaire.
+					<img src="{{asset('images/icons/alert.png')}}" alt="">
+					Attention ! la modification du contrat s'applique à l'ensemble des contrats adhérents ayant souscrit à ce contrat.
+				</p>
+				<p>
+					<strong>Modification des dates de distribution et des statuts de date :</strong>
+					<br>
+					Lorsque vous modifiez une date de distribution l'ensemble des livraisons prévues pour les adhérents sont modifiées, il en va de même pour les status 
+														vous pouvez modifier une date qui n'était pas confirmée, vous pouvez annuler des livraisons ou en reporter. Les adhérents le verront automatiquement dans 
+														leur liste de livraisons.
+				</p>
+			</p>
+		</div>
+	</section>
+{% endblock %}

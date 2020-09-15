@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="producteur-accueil">
+		<h2 class="text-center">Le tableau de bord</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/referent/dashboard.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Le tableau de bord vous résume les principaux indices de l'application. Nombre d'adhérents, nombre de producteurs,
+										nombre de contrats adhérents et nombre de produits. En cliquant sur les icônes vous arrivez directement dans la rubrique
+										concernée.
+				</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

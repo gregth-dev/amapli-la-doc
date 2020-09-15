@@ -1,0 +1,34 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace trésorier</h1>
+	<section id="donation-accueil">
+		<h2 class="text-center">Supprimer une donation</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/tresorier/donation/supprimer.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Trésorier"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des donations"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Dans la liste cliquez sur "Supprimer"</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur "Confirmer" ou "Annuler"</li>
+					</ul>
+				</p>
+				<p>
+					Seulement les donations dont les chèques n'ont pas encore été remis seront disponibles à la suppression.
+				</p>
+			</div>
+		</section>
+	{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="contrat-accueil">
+		<h2 class="text-center">Désinscrire des participants d'une permanence</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/referent/permanences/desinscrire.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des permanences"</li>
+						<l<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Dans la liste cliquez sur "Désinscrire des participants"</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							Décochez les participants que vous souhaitez désinscrire</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur mettre à jour les participants</li>
+					</ul>
+				</p>
+				<p>
+					Les participants peuvent se désinscrire eux-même, dans un délai qui est défini par l'association via l'espace de configuration.
+					<br>
+					Le référent peut en cas de besoin désinscrire lui-même des participants.
+					<br>
+					<img src="{{asset('images/icons/alert.png')}}" alt="">
+					Attention ! Cette opération est irréversible.
+				</p>
+			</p>
+		</div>
+	</section>
+{% endblock %}

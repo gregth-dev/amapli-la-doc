@@ -1,0 +1,61 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="paiement-accueil">
+		<h2 class="text-center">Les paiements depuis un contrat adhérent archivé</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/referent/paiement/contrat_archive.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"
+						</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des contrats archivés"
+						</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Cliquez sur "Contrats adhérents archivés"
+						</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							dans le listing,  Cliquez sur "Voir les paiements"
+						</li>
+					</ul>
+				</p>
+				<p>
+					Vous pouvez consulter l'ensemble des paiements des contrats archivés (numéro de chèque, montant, date de dépôt) et leurs états.
+				</p>
+				<p>
+					Détails de l'état des paiement :
+					<ul>
+						<li>
+							<span class="badge badge-pill badge-success">remis</span>
+							: chèque remis au producteur
+						</li>
+						<li>
+							<span class="badge badge-pill badge-secondary">à remettre</span>
+							: chèque à remettre au producteur
+						</li>
+						<li>
+							<span class="badge badge-pill badge-danger">urgent</span>
+							: chèque à remettre au producteur dont la date de dépôt est dépassée
+						</li>
+					</ul>
+				</p>
+				<p>
+					Chaque paiement dispose d'un bouton "Remettre" se bouton est disponible ou non en fonction de l'état du paiement.
+																									Cliquez sur "Remettre" une fois que le chèque a été remis au producteur.
+				</p>
+
+			</p>
+		</div>
+	</section>
+{% endblock %}

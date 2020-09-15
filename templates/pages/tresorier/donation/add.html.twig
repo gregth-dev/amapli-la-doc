@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace trésorier</h1>
+	<section id="donation-accueil">
+		<h2 class="text-center">Ajouter une donation</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/tresorier/donation/ajouter.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Trésorier"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des donations"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Cliquez sur "Ajouter une donation"</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							Sélectionnez l'adhérent</li>
+						<li><img src="{{asset('images/icons/step5.png')}}" alt="">
+							Indiquez le montant du don</li>
+						<li><img src="{{asset('images/icons/step6.png')}}" alt="">
+							Ajoutez un ou plusieurs paiements</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur "Enregistrer la donation"</li>
+					</ul>
+				</p>
+				<p>
+					Chaque adhérent peut faire plusieurs dons.
+				</p>
+			</div>
+		</section>
+	{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace producteur</h1>
+	<section id="producteur-accueil">
+		<h2 class="text-center">Les paiements</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/producteur/paiements.mp4')}}" type="video/mp4">
+
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+			<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Producteur"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Mes paiements"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Sélectionnez le statut</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							Sélectionnez les dates</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur l'icône "Editer"</li>
+					</ul>
+				</p>
+				<p class="mt-5">
+					Vous pouvez consulter les paiements à venir et qui vous ont été remis. Le nom de l'adhérent, le numero du chèque, le montant et la date de dépôt
+					du chèque sont indiqués. Le numéro dans la colonne de gauche vous sert de référence à communiquer au référent si besoin.
+				</p>
+				<p>
+					Vous pouvez également choisir une période et imprimer la liste des chèques à remettre. Une liste au format PDF est alors
+					générée, avec un récapitulatif des chèques et des montants.
+				</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

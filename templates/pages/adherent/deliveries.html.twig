@@ -1,0 +1,39 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace adhérent</h1>
+	<section id="adherent-contrats">
+		<h2 class="text-center">Mes livraisons</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/adherent/livraisons.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-7">
+				<p class="mt-5">
+					Dans la rubrique mes livraisons vous pouvez consulter l'ensemble de vos livraisons. Celles-ci sont classées chronologiquement, il vous suffit de  Cliquez
+																																		                            sur le mois ou l'année que vous désirez et l'ensemble des livraisons prévues apparaissent. Vous commencez automatiquement sur le mois qui correspond au mois en cours.
+																																		                            Vous y retrouverez les dates ainsi que les produits commandés.
+																																		                            En fonction des livraisons, vous pourrez constater si un changement de planning est apparu, une livraison peut être de différents couleurs :
+					<ul>
+						<li>
+							<strong style="color:#17a2b8">bleue</strong>
+							: la livraison est maintenue, aucun changement dans la date prévue.</li>
+						<li>
+							<strong style="color:#FFFFFF;background-color:black">blanc</strong>
+							: la livraison n'est pas confirmée, il se peut que la date change.</li>
+						<li>
+							<strong style="color:#ffc107">orange</strong>
+							: la livraison est reportée à une autre date non connue à ce jour.</li>
+						<li>
+							<strong style="color:#dc3545">rouge</strong>
+							: la livraison est annulée.</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

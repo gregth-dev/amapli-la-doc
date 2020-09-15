@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="contrat-accueil">
+		<h2 class="text-center">Le listing des contrats adhérents</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/referent/contratadherent/listing.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des contrats adhérents"</li>
+					</ul>
+				</p>
+				<p>
+					Le listing des contrats adhérents vous fourni une vue d'ensemble de tous les contrats adhérent disponibles pour l'ensemble des adherents. 
+															D'un seul coup d'oeil vous aurez accès au nom du contrat, le nom du adherent, sa date de création, sa date d'expiration, 
+															son statut et les actions disponibles.
+				</p>
+				<p>Le statut du contrat vari en fonction des paiements adhérents affiliés à ce contrat.
+					<br>
+					Exemple : un adhérent souscrit au contrat des fruits, les paiements sont validés, le contrat adherent devient alors actif.</p>
+			</p>
+		</div>
+	</section>
+{% endblock %}

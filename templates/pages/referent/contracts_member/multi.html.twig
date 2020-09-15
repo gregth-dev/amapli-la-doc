@@ -1,0 +1,58 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="contratadherent-accueil">
+		<h2 class="text-center">Ajouter un contrat adhérent</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des contrats adhérents"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Cliquez sur "Créer des contrats multiples"</li>
+					</ul>
+				</p>
+				<div class="row">
+					<div class="col-md-6">
+						<video width="640" height="360" controls>
+							<source src="{{asset('images/videos/referent/contratadherent/multi.mp4')}}" type="video/mp4">
+						</video>
+					</div>
+				</div>
+				<p class="mt-5">
+					<h3 class="h6">Créer plusieurs contrats adhérents :</h3>
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Sélectionnez le contrat</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Sélectionnez les adhérents</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Sélectionnez un produit
+						</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur "Créer les contrat"
+						</li>
+					</ul>
+				</p>
+				<p>
+					L'ajout d'un contrat adhérent est un point important de l'application. Comprendre comment créer le contrat est essentiel au bon déroulement de l'application.																																																																																										Je vais vous détailler l'ensemble des points important lors de la création.
+				</p>
+				<p>
+					<strong>Sélection des produits :</strong>
+					<br>
+					Sélectionnez le bon produit en lien avec le contrat. En cas d'erreur un message d'erreur apparaîtra.
+				</p>
+				<p>
+					<strong>Ajout des paiements :</strong>
+					<br>
+					Lors de la création de contrats multiples, les paiements sont obligatoirement ajoutés après la création. 
+                    Voir rubrique <a href="{{path('referent_contracts_member_payments')}}">Ajouter des paiements à un contrat adhérent</a>.
+				</p>
+			</div>
+		</section>
+	{% endblock %}

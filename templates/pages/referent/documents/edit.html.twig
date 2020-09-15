@@ -1,0 +1,47 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="document-accueil">
+		<h2 class="text-center">Modifier un document</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/referent/document/modifier.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des documents"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Dans la liste cliquez sur l'icône du document</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							Cliquez sur l'icône</li>
+						<li><img src="{{asset('images/icons/step5.png')}}" alt="">
+							Choisissez "Enregistrer" ou "Ouvrir" le document</li>
+						<li>Etape optionnelle si vous n'êtes pas encore identifié :</li>
+						<li><img src="{{asset('images/icons/step6.png')}}" alt="">
+							Saisissez vos identifiants</li>
+						<li><img src="{{asset('images/icons/step7.png')}}" alt="">
+							Modifiez le document</li>
+						<li><img src="{{asset('images/icons/step8.png')}}" alt="">
+							Cliquez sur "Modifier"</li>
+						<li><img src="{{asset('images/icons/step9.png')}}" alt="">
+							Ajouter le document modifié</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur "Mettre à jour le document"</li>
+					</ul>
+				</p>
+				<p>
+					Lors d'une mise à jour la date de mise à jour est stockée.
+				</p>
+			</div>
+		</section>
+	{% endblock %}

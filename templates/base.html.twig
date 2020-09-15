@@ -1,12 +1,478 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Amapli la doc !
+			{% endblock %}
+		</title>
+		{% block stylesheets %}
+			<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link rel="stylesheet" href="{{asset('css/style.css')}}">
+			<link rel="stylesheet" href="{{asset('css/doc.css')}}">
+		{% endblock %}
+	</head>
+	<body>
+		{% block body %}
+			<div class="wrapper d-flex align-items-stretch">
+				{% block nav %}
+					<nav id="sidebar">
+						<div class="p-4 pt-5">
+							<a href="{{path('home')}}" class="img logo mb-5" style="background-image: url({{asset('images/logo.png')}});"></a>
+							<ul class="list-unstyled components mb-5">
+								<li class="">
+									<a href="#adherent" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Espace adhérent</a>
+									<ul class="collapse list-unstyled" id="adherent">
+										<li>
+											<a href="{{path('member_index')}}">Bienvenue</a>
+										</li>
+										<li>
+											<a href="#moncompte" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Mon compte</a>
+											<ul class="collapse list-unstyled" id="moncompte">
+												<li>
+													<a href="{{path('member_account')}}">Modifier ses coordonnées</a>
+
+												</li>
+												<li>
+													<a href="{{path('member_account')}}">Modifier son adresse email</a>
+												</li>
+												<li>
+													<a href="{{path('member_account')}}">Modifier son Mot de passe</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#mescontrats" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Mes contrats</a>
+											<ul class="collapse list-unstyled" id="mescontrats">
+												<li>
+													<a href="{{path('member_contracts')}}">Listing des contrats</a>
+												</li>
+												<li>
+													<a href="{{path('member_contracts')}}">Consulter un contrat</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="{{path('member_payments')}}">Mes paiements</a>
+										</li>
+										<li>
+											<a href="{{path('member_deliveries')}}">Mes livraisons</a>
+										</li>
+										<li>
+											<a href="{{path('member_permanences')}}">Mes permanences</a>
+										</li>
+										<li>
+											<a href="#listing" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Listing</a>
+											<ul class="collapse list-unstyled" id="listing">
+												<li>
+													<a href="{{path('member_listing')}}">Listing des adhérents</a>
+												</li>
+												<li>
+													<a href="{{path('member_listing')}}">Listing des produits</a>
+												</li>
+												<li>
+													<a href="{{path('member_listing')}}">Listing des référents</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="">
+									<a href="#producteur" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Espace producteur</a>
+									<ul class="collapse list-unstyled" id="producteur">
+										<li>
+											<a href="{{path('producer_members')}}">Mes adhérents</a>
+										</li>
+										<li>
+											<a href="{{path('producer_payments')}}">Mes paiements</a>
+										</li>
+										<li>
+											<a href="{{path('producer_deliveries')}}">Mes livraisons</a>
+										</li>
+										<li>
+											<a href="{{path('producer_edit_deliveries')}}">Editer mes livraisons</a>
+										</li>
+									</ul>
+								</li>
+								<li class="">
+									<a href="#referent" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Espace réferent</a>
+									<ul class="collapse list-unstyled" id="referent">
+										<li>
+											<a href="{{path('referent_dashboard')}}">Tableau de bord</a>
+										</li>
+										<li>
+											<a href="#gestionadherents" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion des adhérents</a>
+											<ul class="collapse list-unstyled" id="gestionadherents">
+												<li>
+													<a href="{{path('referent_members_listing')}}">Listing des adhérents</a>
+												</li>
+												<li>
+													<a href="{{path('referent_members_add')}}">Ajouter un adhérent</a>
+												</li>
+												<li>
+													<a href="{{path('referent_members_read')}}">Consulter un adhérent</a>
+												</li>
+												<li>
+													<a href="{{path('referent_members_edit')}}">Modifier un adhérent</a>
+												</li>
+												<li>
+													<a href="{{path('referent_members_delete')}}">Supprimer un adhérent</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#gestionproducteurs" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion des producteurs</a>
+											<ul class="collapse list-unstyled" id="gestionproducteurs">
+												<li>
+													<a href="{{path('referent_producers_listing')}}">Listing des producteurs</a>
+												</li>
+												<li>
+													<a href="{{path('referent_producers_add')}}">Ajouter un producteur</a>
+												</li>
+												<li>
+													<a href="{{path('referent_producers_read')}}">Consulter un producteur</a>
+												</li>
+												<li>
+													<a href="{{path('referent_producers_edit')}}">Modifier un producteur</a>
+												</li>
+												<li>
+													<a href="{{path('referent_producers_delete')}}">Supprimer un producteur</a>
+												</li>
+												<li>
+													<a href="{{path('referent_producers_edit_deliveries')}}">Editer une liste de livraison</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#gestionproduits" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion des produits</a>
+											<ul class="collapse list-unstyled" id="gestionproduits">
+												<li>
+													<a href="{{path('referent_products_listing')}}">Listing des produits</a>
+												</li>
+												<li>
+													<a href="{{path('referent_products_add')}}">Ajouter un produit</a>
+												</li>
+												<li>
+													<a href="{{path('referent_products_edit')}}">Modifier un produit</a>
+												</li>
+												<li>
+													<a href="{{path('referent_products_delete')}}">Supprimer un produit</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#contratproducteur" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion des contrats producteurs</a>
+											<ul class="collapse list-unstyled" id="contratproducteur">
+												<li>
+													<a href="{{path('referent_contracts_listing')}}">Listing des contrats producteurs</a>
+												</li>
+												<li>
+													<a href="{{path('referent_contracts_add')}}">Ajouter un contrat producteur</a>
+												</li>
+												<li>
+													<a href="{{path('referent_contracts_read')}}">Consulter un contrat producteur</a>
+												</li>
+												<li>
+													<a href="{{path('referent_contracts_edit')}}">Modifier un contrat producteur</a>
+												</li>
+												<li>
+													<a href="{{path('referent_contracts_delete')}}">Supprimer un contrat producteur</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#contratadherent" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion des contrats adhérents</a>
+											<ul class="collapse list-unstyled" id="contratadherent">
+												<li>
+													<a href="{{path('referent_contracts_member_listing')}}">Listing des contrats adhérents</a>
+												</li>
+												<li>
+													<a href="{{path('referent_contracts_member_add')}}">Ajouter un contrat adhérent</a>
+												</li>
+												<li>
+													<a href="{{path('referent_contracts_member_multi')}}">Ajouter plusieurs contrats adhérents</a>
+												</li>
+												<li>
+													<a href="{{path('referent_contracts_member_read')}}">Consulter un contrat adhérent</a>
+												</li>
+												<li>
+													<a href="{{path('referent_contracts_member_delete')}}">Supprimer un contrat adhérent</a>
+												</li>
+												<li>
+													<a href="{{path('referent_contracts_member_payments')}}">Modifier les paiements d'un contrat adhérent</a>
+												</li>
+												<li>
+													<a href="{{path('referent_contracts_member_check')}}">Remettre les paiements d'un contrat adhérent</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#lespaiements" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion des paiements</a>
+											<ul class="collapse list-unstyled" id="lespaiements">
+												<li>
+													<a href="{{path('referent_payment_listing_member')}}">Listing des paiements par adhérent</a>
+
+												</li>
+												<li>
+													<a href="{{path('referent_payment_listing_contract')}}">Listing des paiements par contrat producteur</a>
+												</li>
+												<li>
+													<a href="{{path('referent_payment_listing_duration')}}">Listing des paiements par période</a>
+												</li>
+												<li>
+													<a href="{{path('referent_payment_listing_all')}}">Listing de tout les paiements</a>
+												</li>
+												<li>
+													<a href="{{path('referent_payment_contract')}}">Voir les paiements depuis un contrat adhérent</a>
+												</li>
+												<li>
+													<a href="{{path('referent_payment_archive_contract')}}">Voir les paiements d'un contrat adhérent archivé</a>
+												</li>
+												<li>
+													<a href="{{path('referent_payment_subscription')}}">Voir les paiements des adhésions</a>
+												</li>
+												<li>
+													<a href="{{path('referent_payment_donation')}}">Voir les paiements des donations</a>
+												</li>
+												<li>
+													<a href="{{path('referent_payment_check')}}">Remettre un paiement</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#livraisons" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion des livraisons</a>
+											<ul class="collapse list-unstyled" id="livraisons">
+												<li>
+													<a href="{{path('referent_deliveries_listing_member')}}">Listing des livraisons par adhérent</a>
+												</li>
+												<li>
+													<a href="{{path('referent_deliveries_listing_producer')}}">Listing des livraisons par producteur</a>
+												</li>
+												<li>
+													<a href="{{path('referent_deliveries_edit')}}">Editer une liste de livraisons</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#permanence" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion des permanences</a>
+											<ul class="collapse list-unstyled" id="permanence">
+												<li>
+													<a href="{{path('referent_permanence_listing')}}">Listing des permanences</a>
+												</li>
+												<li>
+													<a href="{{path('referent_permanence_add')}}">Ajouter une permanence</a>
+												</li>
+												<li>
+													<a href="{{path('referent_permanence_add_multi')}}">Ajouter une série de permanences</a>
+												</li>
+												<li>
+													<a href="{{path('referent_permanence_read')}}">Consulter une permanence</a>
+												</li>
+												<li>
+													<a href="{{path('referent_permanence_edit')}}">Modifier une permanence</a>
+												</li>
+												<li>
+													<a href="{{path('referent_permanence_delete')}}">Supprimer une permanence</a>
+												</li>
+												<li>
+													<a href="{{path('referent_permanence_unsubscribe')}}">Désinscrire des participants</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#document" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion des documents</a>
+											<ul class="collapse list-unstyled" id="document">
+												<li>
+													<a href="{{path('referent_document_listing')}}">Listing des documents</a>
+												</li>
+												<li>
+													<a href="{{path('referent_document_add')}}">Ajouter un document</a>
+												</li>
+												<li>
+													<a href="{{path('referent_document_read')}}">Consulter un document</a>
+												</li>
+												<li>
+													<a href="{{path('referent_document_edit')}}">Modifier un document</a>
+												</li>
+												<li>
+													<a href="{{path('referent_document_delete')}}">Supprimer un document</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#archive" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion des archives</a>
+											<ul class="collapse list-unstyled" id="archive">
+												<li>
+													<a href="{{path('referent_archive_producer_contract_archive')}}">Archiver un contrat Producteur</a>
+												</li>
+												<li>
+													<a href="{{path('referent_archive_producer_contract_listing')}}">Listing des contrats producteurs archivés</a>
+												</li>
+												<li>
+													<a href="{{path('referent_archive_producer_contract_read')}}">Consulter un contrat Producteur archivé</a>
+												</li>
+												<li>
+													<a href="{{path('referent_archive_member_contract_archive')}}">Archiver un contrat adhérent</a>
+												</li>
+												<li>
+													<a href="{{path('referent_archive_member_contract_listing')}}">Listing des contrats adhérents archivés</a>
+												</li>
+												<li>
+													<a href="{{path('referent_archive_member_contract_read')}}">Consulter un contrat adhérent archivé</a>
+												</li>
+												<li>
+													<a href="{{path('referent_archive_member_contract_payments')}}">Consulter les paiements d'un contrat adhérent archivé</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="{{path('referent_emargement')}}">Editer une feuille d'émargement</a>
+										</li>
+									</ul>
+								</li>
+								<li class="">
+									<a href="#tresorier" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Espace trésorier</a>
+									<ul class="collapse list-unstyled" id="tresorier">
+										<li>
+											<a href="#adhesions" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion des adhésions</a>
+											<ul class="collapse list-unstyled" id="adhesions">
+												<li>
+													<a href="{{path('treasurer_subscription_listing')}}">Listing des adhésions</a>
+												</li>
+												<li>
+													<a href="{{path('treasurer_subscription_unsubscribe')}}">Voir les adhérents sans adhésions</a>
+
+												</li>
+												<li>
+													<a href="{{path('treasurer_subscription_add')}}">Ajouter une adhésion</a>
+												</li>
+												<li>
+													<a href="{{path('treasurer_subscription_payments')}}">Paiements des adhésions</a>
+												</li>
+												<li>
+													<a href="{{path('treasurer_subscription_edit')}}">Modifier une adhésion</a>
+												</li>
+												<li>
+													<a href="{{path('treasurer_subscription_delete')}}">Supprimer une adhésion</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#associations" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion des associations</a>
+											<ul class="collapse list-unstyled" id="associations">
+												<li>
+													<a href="{{path('treasurer_organism_listing')}}">Listing des associations</a>
+												</li>
+												<li>
+													<a href="{{path('treasurer_organism_add')}}">Ajouter une association</a>
+												</li>
+												<li>
+													<a href="{{path('treasurer_organism_edit')}}">Modifier une association</a>
+												</li>
+												<li>
+													<a href="{{path('treasurer_organism_delete')}}">Supprimer une association</a>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#donations" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion des donations</a>
+											<ul class="collapse list-unstyled" id="donations">
+												<li>
+													<a href="{{path('treasurer_donation_listing')}}">Listing des donations</a>
+												</li>
+												<li>
+													<a href="{{path('treasurer_donation_add')}}">Ajouter une donation</a>
+												</li>
+												<li>
+													<a href="{{path('treasurer_donation_payments')}}">Paiements des donations</a>
+												</li>
+												<li>
+													<a href="{{path('treasurer_donation_edit')}}">Modifier une donation</a>
+												</li>
+												<li>
+													<a href="{{path('treasurer_donation_delete')}}">Supprimer une donation</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="">
+									<a href="#admin" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Espace administrateur</a>
+									<ul class="collapse list-unstyled" id="admin">
+										<li>
+											<a href="{{path('admin_add')}}">Définir / Modifier un rôle</a>
+										</li>
+										<li>
+											<a href="{{path('admin_delete')}}">Supprimer un rôle</a>
+										</li>
+										<li>
+											<a href="{{path('admin_access')}}">Gérer l'accès aux documents</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="{{path('email')}}">Envoi d'email</a>
+								</li>
+							</ul>
+
+							<div class="footer">
+								<p>
+									Copyright &copy;2020
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										                Amapli |
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										                réalisé par
+									<a href="http://gregorythorel.me">Grégory Thorel</a>
+									|
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										                Version actuelle : V1.0
+								</p>
+							</div>
+
+						</div>
+					</nav>
+
+				{% endblock %}
+				<div id="content" class="p-4 p-md-5">
+					{% block content %}
+						{% block navtop %}
+							<nav class="navbar navbar-expand-lg navbar-light bg-light">
+								<div class="container-fluid">
+									<button type="button" id="sidebarCollapse" class="btn btn-primary">
+										<i class="fa fa-bars"></i>
+										<span class="sr-only">Toggle Menu</span>
+									</button>
+									<button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+										<i class="fa fa-bars"></i>
+									</button>
+									<div class="collapse navbar-collapse" id="navbarSupportedContent">
+										<ul class="nav navbar-nav ml-auto">
+											<li class="nav-item">
+												<a class="nav-link" href="http://escalamap.gregorythorel.me">Démo</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#">Télécharger la documentation</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#">Détails techniques</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#">Contact</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</nav>
+
+						{% endblock %}
+						{% block page %}{% endblock %}
+					{% endblock %}
+				</div>
+			</div>
+		{% endblock %}
+		{% block javascripts %}
+			<script src="{{asset('js/jquery.min.js')}}"></script>
+			<script src="{{asset('js/bootstrap.min.js')}}"></script>
+			<script src="{{asset('js/popper.min.js')}}"></script>
+			<script src="{{asset('js/main.js')}}"></script>
+		{% endblock %}
+	</body>
+</html></body></html>

@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Envoi d'email</h1>
+	<section id="producteur-accueil">
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/email/email.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Envoi d'email"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Choisissez les destinataires</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Choisissez votre modèle d'email</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							Saisissez votre message</li>
+						<li>
+							<strong>Optionnel :</strong>
+						</li>
+						<li><img src="{{asset('images/icons/step5.png')}}" alt="">
+							Ajouter des documents</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur "Envoyer"</li>
+					</ul>
+				</p>
+				<p>Fonctionnalité accessible uniquement aux référent, trésorier, administrateur et producteur.</p>
+				<p>Elle sera disponible prochainement pour les adhérents dans une autre version.</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

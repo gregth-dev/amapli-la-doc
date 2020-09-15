@@ -1,0 +1,47 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="paiement-accueil">
+		<h2 class="text-center">Remettre des paiements</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/referent/paiement/remise.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p>
+					Vous pouvez remettre un paiement depuis plusieurs endroit de l'application. A partir du moment où le bouton "Remettre" apparaît.
+					                    Une fois la remise validée celle-ci change de statut immédiatement.
+					<img src="{{asset('images/icons/alert.png')}}" alt="">
+					Attention ! Une fois validée la remise ne peut être annulée.
+				</p>
+				<p>
+					Détails de l'état des paiement :
+					<ul>
+						<li>
+							<span class="badge badge-pill badge-success">remis</span>
+							: chèque remis au producteur
+						</li>
+						<li>
+							<span class="badge badge-pill badge-secondary">à remettre</span>
+							: chèque à remettre au producteur
+						</li>
+						<li>
+							<span class="badge badge-pill badge-danger">urgent</span>
+							: chèque à remettre au producteur dont la date de dépôt est dépassée
+						</li>
+					</ul>
+				</p>
+				<p>
+					Chaque paiement dispose d'un bouton "Remettre" se bouton est disponible ou non en fonction de l'état du paiement.
+																								Cliquez sur "Remettre" une fois que le chèque a été remis au producteur.
+				</p>
+
+			</p>
+		</div>
+	</section>
+{% endblock %}

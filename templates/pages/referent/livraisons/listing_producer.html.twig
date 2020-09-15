@@ -1,0 +1,47 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="contratadherent-accueil">
+		<h2 class="text-center">Listing livraison d'un producteur</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des livraisons"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Dans la liste cliquez sur "Voir le détail"</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							Naviguez en cliquant sur les périodes souhaitées</li>
+					</ul>
+				</p>
+				<div class="row">
+					<div class="col-md-6">
+						<video width="640" height="360" controls>
+							<source src="{{asset('images/videos/referent/livraisons/producteur.mp4')}}" type="video/mp4">
+						</video>
+					</div>
+				</div>
+				<ul>
+					<li>
+						<strong style="color:#17a2b8">bleue</strong>
+						: la livraison est maintenue, aucun changement dans la date prévue.</li>
+					<li>
+						<strong style="color:#FFFFFF;background-color:black">blanc</strong>
+						: la livraison n'est pas confirmée, il se peut que la date change.</li>
+					<li>
+						<strong style="color:#ffc107">orange</strong>
+						: la livraison est reportée à une autre date non connue à ce jour.</li>
+					<li>
+						<strong style="color:#dc3545">rouge</strong>
+						: la livraison est annulée.</li>
+				</ul>
+				<p>Les quantités à livrer apparaissent en dessous de chaque produit.</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

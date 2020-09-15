@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="contratadherent-accueil">
+		<h2 class="text-center">Listing livraison d'un producteur</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des livraisons"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Cliquez sur "Editer des livraisons"</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							Sélectionnez le producteur</li>
+						<li><img src="{{asset('images/icons/step5.png')}}" alt="">
+							Sélectionnez le format</li>
+						<li><img src="{{asset('images/icons/step6.png')}}" alt="">
+							Sélectionnez les dates</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur l'icône "Editer"</li>
+						<li>
+							<strong>Etapes optionnelles :</strong>
+						</li>
+						<li><img src="{{asset('images/icons/step7.png')}}" alt="">
+							Cochez "Enregistrer le document"</li>
+						<li><img src="{{asset('images/icons/step8.png')}}" alt="">
+							Saisissez un nom de document</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur l'icône "Editer"</li>
+
+					</ul>
+				</p>
+				<div class="row">
+					<div class="col-md-6">
+						<video width="640" height="360" controls>
+							<source src="{{asset('images/videos/referent/livraisons/edit.mp4')}}" type="video/mp4">
+						</video>
+					</div>
+				</div>
+				<p>Les quantités à livrer apparaissent en dessous de chaque produit.</p>
+				<p>Les documents enregistrés apparaissent dans la rubrique "Gestion des documents".</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

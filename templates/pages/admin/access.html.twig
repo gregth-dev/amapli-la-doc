@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace Administrateur</h1>
+	<section id="admin-compte">
+		<h2 class="text-center">Gestion des rôles utilisateurs</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/admin/acces.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace administrateur"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des accès"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Saisir un nom d'utilisateur</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Saisir un mot de passe</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							Cliquez sur "Créer les identifiants"</li>
+					</ul>
+				</p>
+				<p class="mt-5">
+					Cet espace de gestion des accès, vous permet de modifier les identifiants permettant d'accèder aux documents du serveur de l'application.
+					                    Le nom d'utilisateur doit faire au minium 5 caractères.
+					<br>
+					Le mot de passe doit comporter minimum 8 caractères, 1 majuscule, 1 chiffre et 1 caractère spécial.
+				</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

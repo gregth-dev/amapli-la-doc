@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="producteur-accueil">
+		<h2 class="text-center">Ajouter un adhérent</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/referent/adherent/ajouter.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des adhérents"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Cliquez sur "Ajouter un adhérent"</li>
+					</ul>
+				</p>
+				<p>
+					Cette rubrique vous permet d'ajouter un adhérent et de l'enregistrer dans la base de données.
+																																																												Il faut remplir correctement les champs obligatoires (tous sauf téléphone 2).
+																																																												Pas d'espace entre les chiffres pour les champs code postal et téléphone.
+																																																												Le rôle de l'adhérent sera "Membre", pour le changement de rôle il faut être administrateur.
+																																																												Une fois l'adhérent ajouté il sera disponible de suite dans la liste.
+
+				</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

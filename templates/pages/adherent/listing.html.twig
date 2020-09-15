@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace adhérent</h1>
+	<section id="adherent-contrats">
+		<h2 class="text-center">Listing des adhérents, produits et référents</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/adherent/listing.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Vous pouvez accèder à la liste des adhérents, des produits et des référents. vous pouvez consulter les produits disponibles par producteur, pour
+															chaque produit vous y trouverez le nom du produit, le conditionnement, le prix unitaire.
+															Concernant les référents vous aurez pour chaque référent le contrat dont il s'occupe.
+				</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="contrat-accueil">
+		<h2 class="text-center">Supprimer un contrat producteur</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/referent/contratproducteur/supprimer.mp4')}}" type="video/mp4">
+
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des producteurs"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							dans la liste face au contrat  Cliquez sur "Supprimer"</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							Cliquez sur "Confirmer" ou "Annuler</li>
+					</ul>
+				</p>
+				<p>
+					<img src="{{asset('images/icons/alert.png')}}" alt="">
+					Seul les contrats "non actif" pourront être supprimés, un contrat "non actif" n'est relié à aucun contrat adhérent. 
+															Dans le cas contraire le bouton "supprimer" n'apparaît pas.
+				</p>
+			</p>
+		</div>
+	</section>
+{% endblock %}

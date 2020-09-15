@@ -1,0 +1,37 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace producteur</h1>
+	<section id="producteur-accueil">
+		<h2 class="text-center">Editer mes livraisons</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/producteur/editer.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Producteur"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Editer des livraisons"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Sélectionnez le format</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							Sélectionnez les dates</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur l'icône "Editer"</li>
+					</ul>
+				</p>
+                <p class="mt-5">
+                    Un fichier PDF est généré vous pourrez l'enregistrer ou l'imprimer.
+                </p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

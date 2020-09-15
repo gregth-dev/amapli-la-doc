@@ -1,0 +1,66 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="paiement-accueil">
+		<h2 class="text-center">Tous les paiements</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/referent/paiement/listing/liste.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"
+						</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des paiement"
+						</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Cliquez sur "Tous les paiements"
+						</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							utiliser la recherche pour cibler vos paiements
+						</li>
+					</ul>
+				</p>
+				<p>
+					Vous pouvez effectuer des recherches sur les paiements :
+					<ul>
+						<li>- recherche par statut</li>
+						<li>- recherche par nom ou prénom</li>
+						<li>- recherche par nom de contrat</li>
+						<li>- recherche par montant</li>
+						<li>- recherche par numéro de chèque</li>
+					</ul>
+				</p>
+				<p>
+					Détails de l'état des paiement :
+					<ul>
+						<li>
+							<span class="badge badge-pill badge-success">remis</span>
+							: chèque remis au producteur
+						</li>
+						<li>
+							<span class="badge badge-pill badge-secondary">à remettre</span>
+							: chèque non remis au producteur
+						</li>
+						<li>
+							<span class="badge badge-pill badge-danger">urgent</span>
+							: chèque non remis au producteur dont la date de dépôt est dépassée
+						</li>
+					</ul>
+				</p>
+				<p>
+					Chaque paiement dispose d'un bouton "Remettre" se bouton est disponible ou non en fonction de l'état du paiement.																																																														                Cliquez sur "Remettre" une fois que le chèque a été remis au producteur.
+				</p>
+			</p>
+		</div>
+	</section>
+{% endblock %}

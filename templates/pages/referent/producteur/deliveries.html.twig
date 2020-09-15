@@ -1,0 +1,39 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="producteur-accueil">
+		<h2 class="text-center">Editer les livraisons d'un producteur</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/referent/producteur/edit_livraisons.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des producteurs"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Cliquez sur "Editer une liste de livraisons"</li>
+					</ul>
+				</p>
+				<p>
+					Vous arrivez sur une nouvelle page qui vous permet d'éditer une liste de livraisons en fonction du producteur et 
+															sur la période de votre choix. Une fois les champs rempli, Cliquez sur créer le PDF. Le fichier pdf est automatiquement 
+															créé contenant une liste avec la date de la livraison, les produits et les quantités à fournir.
+				</p>
+				<p>
+					Vous pouvez également enregistrer le document dans la base de données de l'application, enfin de pouvoir le consulter ultérieurement 
+														ou bien pouvoir l'envoyer par mail depuis l'application.
+				</p>
+			</p>
+		</div>
+	</section>
+{% endblock %}

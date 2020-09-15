@@ -1,0 +1,94 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="contrat-accueil">
+		<h2 class="text-center">Ajouter un contrat producteur</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/referent/contratproducteur/ajouter.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des producteurs"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Cliquez sur "Ajouter un contrat"</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							remplir le formulaire</li>
+						<li><img src="{{asset('images/icons/step5.png')}}" alt="">
+							attribuer le contrat à un producteur</li>
+						<li><img src="{{asset('images/icons/step6.png')}}" alt="">
+							Indiquer la fréquence de livraison</li>
+						<li><img src="{{asset('images/icons/step7.png')}}" alt="">
+							Indiquer les dates du contrat</li>
+						<li><img src="{{asset('images/icons/step8.png')}}" alt="">
+							Indiquer le mode de distribution</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur "Enregistrer le contrat"</li>
+					</ul>
+				</p>
+				<p>
+					L'ajout d'un contrat producteur est un point important de l'application. Comprendre comment créer le contrat est essentiel au bon déroulement de l'application.
+																																																																																																									Je vais vous détailler l'ensemble des points important lors de la création.
+				</p>
+				<p>
+					<strong>Nom du contrat :</strong>
+					<br>
+					Saisissez ici le nom de votre contrat. Vous êtes totalement libre dans la nomination du contrat, sachez juste que ce nom apparaîtra tout au long de l'application 
+																																																																																																			choisissez donc un nom cohérent.
+				</p>
+				<p>
+					<strong>Choix du producteur :</strong>
+
+					<br>
+					Il s'agit ici d'indiquer à quel producteur sera rattaché le contrat. Donc celui qui fournit la marchandise et encaisse les paiements. Un producteur 
+																																																																																																																													peut disposer d'un nombre illimité de contrats producteurs. Encore ici il faut rester cohérent, sachant que vous pouvez créer un "contrat fruits" qui reprend l'ensemble des produits
+																																																																																																																													disponibles par le producteur. Vous pouvez donc réaliser des contrats "one shot" à durée limitée dans le temps ou au caractère exceptionnel.
+				</p>
+				<p>
+					<strong>Choix des fréquences de livraisons :</strong>
+
+					<br>
+					Cette étape est très importante, elle vous permet d'établir le calendrier des livraisons du contrat et donc du producteur. 
+																																																																																																																													Si vous choisissez "une fois par semaine" une date de livraison pour ce contrat sera créée tout les 7 jours. "2 fois par mois" tout les 14 jours, etc...
+																																																																																																																													Les livraisons personnalisées vous permettent de ne pas éditer un planning fixe basé sur une fréquence prédéfinie, vous pouvez choisir les dates de votre choix en les ajoutant 
+																																																																																																																													une par une.
+				</p>
+				<p>
+					<strong>Choix des dates :</strong>
+
+					<ul>
+						<li>Date limite d'inscription : au delà de cette date le contrat producteur ne pourra plus recevoir de souscription d'adhérent.</li>
+						<li>Date de la 1ère distribution : date à laquelle aura lieu la 1ère distribution, elle sera automatiquement ajoutée au calendrier des distributions</li>
+						<li>Date de la dernière distribution : date à laquelle aura lieu la dernière distribution, elle sera automatiquement ajoutée au calendrier des distributions</li>
+					</ul>
+				</p>
+				<p>
+					<strong>Gestion des produits :</strong>
+
+					<br>
+					- "Varie en fonction des distributions" : lorsque les produits peuvent variés d'une distribution à une autre. Si vous avez des produits différents avec des quantités différentes à des
+																																																							dates différentes.
+					<br>
+					- "Ne varie pas en fonction des distributions" : les produits, les quantités sont toujours les mêmes à chaque distribution.
+
+				</p>
+				<p>
+					<strong>Ajouter une date de distribution :</strong>
+
+					<br>
+					Vous pouvez ajouter autant de date que vous le souhaitez, vérifiez bien à ce qu'elles soient supérieures à la date de 1ère distribution et inférieures à la date de dernière distribution. Dans
+																																							le cas contraire vous aurez un message d'erreur qui vous avertira.
+				</p>
+			</div>
+		</section>
+	{% endblock %}

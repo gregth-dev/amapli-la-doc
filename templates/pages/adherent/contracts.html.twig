@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace adhérent</h1>
+	<section id="adherent-contrats">
+		<h2 class="text-center">Mes contrats</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/adherent/contrats.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Dans la rubrique mes contrats vous pouvez consulter l'ensemble de vos contrats. Vous avez le nom du contrat, la date de création,
+																				la date d'expiration, un contrat est considéré comme actif lorsque le 1er paiement a été remis. Vous pouvez  Cliquez sur voir le contrat pour plus de détails.
+				</p>
+				<p class="mt-5">
+					Voir mon contrat permet d'obtenir différentes informations comme les produits commandés et leurs quantités, la date de livraison prévues,
+																				le nom du référent chargé du contrat et du suppléant s'il y en un. Vous pouvez également accèder à des informations supplémentaires lorsqu'il y en a.
+				</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

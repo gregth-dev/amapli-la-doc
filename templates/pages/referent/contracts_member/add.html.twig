@@ -1,0 +1,118 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="contratadherent-accueil">
+		<h2 class="text-center">Ajouter un contrat adhérent</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des contrats adhérents"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Cliquez sur "Ajouter un contrat"</li>
+					</ul>
+				</p>
+				<div class="row">
+					<div class="col-md-6">
+						<video width="640" height="360" controls>
+							<source src="{{asset('images/videos/referent/contratadherent/ajouter.mp4')}}" type="video/mp4">
+						</video>
+					</div>
+				</div>
+				<p class="mt-5">
+					<h3 class="h6">Pour un contrat où les distributions ne varie pas :</h3>
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							remplissez les champs</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Etape suivante"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Cliquez sur "Ajouter une commande"
+						</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							indiquer le(s) produit(s) souhaité(s) et la quantité souhaitée
+						</li>
+						<li><img src="{{asset('images/icons/step5.png')}}" alt="">
+							Cliquez sur "Etape suivante"</li>
+						<li><img src="{{asset('images/icons/step6.png')}}" alt="">
+							Cliquez sur "Ajouter un paiement"
+						</li>
+						<li><img src="{{asset('images/icons/step7.png')}}" alt="">
+							remplissez les champs
+						</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur "Enregistrer le contrat"
+						</li>
+					</ul>
+				</p>
+				<div class="row">
+					<div class="col-md-6">
+						<video width="640" height="360" controls>
+							<source src="{{asset('images/videos/referent/contratadherent/ajouter_multi.mp4')}}" type="video/mp4">
+						</video>
+					</div>
+				</div>
+				<p class="mt-5">
+					<h3 class="h6">Pour un contrat où les distributions varient :</h3>
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							remplissez les champs</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Etape suivante"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Cliquez sur "Ajouter une commande"
+						</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							indiquer le(s) produit(s) souhaité(s) et la quantité souhaitée
+						</li>
+						<li><img src="{{asset('images/icons/step5.png')}}" alt="">
+							indiquer le(s) date(s) souhaité(s)
+						</li>
+						<li><img src="{{asset('images/icons/step6.png')}}" alt="">
+							Cliquez sur "Etape suivante"</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur "Enregistrer le contrat"
+						</li>
+						<li><strong>Etapes optionnelles :</strong></li>
+						<li><img src="{{asset('images/icons/step7.png')}}" alt="">
+							Cliquez sur "Ajouter un paiement"
+						</li>
+						<li><img src="{{asset('images/icons/step8.png')}}" alt="">
+							remplissez les champs
+						</li>
+						<li><img src="{{asset('images/icons/done.png')}}" alt="">
+							Cliquez sur "Enregistrer le contrat"
+						</li>
+					</ul>
+				</p>
+				<p>
+					L'ajout d'un contrat adhérent est un point important de l'application. Comprendre comment créer le contrat est essentiel au bon déroulement de l'application.																																																																																										Je vais vous détailler l'ensemble des points important lors de la création.
+				</p>
+				<p>
+					<strong>Ajout des produits :</strong>
+					<br>
+					Vous n'êtes pas limité dans le nombre de produit à ajouter. Uniquement les produits en lien avec le contrat producteur vous seront proposés.
+				</p>
+				<p>
+					<strong>Résumé du contrat :</strong>
+					<br>
+					Distributions du contrat correspond au nombre de dates de livraisons du contrat producteur. Lors d'un contrat où les distributions peuvent variées, les distributions choisies
+																				ne sont pas forcement égales à celles proposées par le contrat producteur.
+					<br>
+					L'ensemble des produits, quantités et prix vous est indiqué, si les produits on des cautions comme des pots de yaourt ou bouteille de verre, cela vous est indiqué 
+																				également.
+				</p>
+				<p>
+					<strong>Ajout des paiements :</strong>
+					<br>
+					Vous n'êtes pas limité dans le nombre de paiement à ajouter. Si vous ajoutez des paiements les montants seront contrôlés avant l'enregistrement du contrat.
+					Les paiements ne sont pas obligatoires vous pouvez les ajouter plus tard
+				</p>
+			</div>
+		</section>
+	{% endblock %}

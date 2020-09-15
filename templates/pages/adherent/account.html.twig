@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace adhérent</h1>
+	<section id="adherent-compte">
+		<h2 class="text-center">Mon compte</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/adherent/compte.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Mon compte"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Mes coordonnées"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Cliquez sur "Mon email"</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							Cliquez sur "Mon mot de passe"</li>
+					</ul>
+				</p>
+				<p class="mt-5">
+					<ul>
+						Dans la rubrique mon compte vous pouvez modifier :
+						<li>- vos coordonnées : tous les champs sont obligatoires sauf Téléphone 2</li>
+						<li>- votre adresse email : entrez un email valide, les informations relatives à votre compte vous seront transmises à cette adresse</li>
+						<li>- votre mot de passe : pour plus de sécurité, il est conseillé de changer le mot de passe qui vous est envoyé lors de la création de votre compte.</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="contratadherent-accueil">
+		<h2 class="text-center">Remettre les paiements d'un contrat adhérent</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+            				<div class="row">
+					<div class="col-md-6">
+						<video width="640" height="360" controls>
+							<source src="{{asset('images/videos/referent/contratadherent/check.mp4')}}" type="video/mp4">
+						</video>
+					</div>
+				</div>
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des contrats adhérents"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Dans la liste cliquez sur "Voir les paiements"</li>
+						<li><img src="{{asset('images/icons/step4.png')}}" alt="">
+							Dans la liste cliquez sur "Remettre"</li>
+					</ul>
+				</p>
+				<p>
+					Une fois le paiement remis le montant restant dû se met à jour.
+				</p>
+			</div>
+		</section>
+	{% endblock %}

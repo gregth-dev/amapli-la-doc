@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace adhérent</h1>
+	<section id="adherent-contrats">
+		<h2 class="text-center">Mes permanences</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/adherent/permanences.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Dans la rubrique mes permanences vous pouvez consulter l'ensemble de vos permanences ainsi que les permanences disponibles. Pour s'inscrire il suffit de  Cliquez
+																					                            sur s'inscrire. Vous pourrez ensuite consulter les permanences auxquelles vous êtes inscrit dans la rubrique "mes permanences". Vous pouvez consulter une personne
+																					                            et voir certaines informations telles que le nombre de participants, les nom et prénom des participants et les éventuels commentaires.
+																					                            Le délai pour vous désinscrire est paramètrable par l'administrateur. Par défaut vous disposez d'un mois avant la date de la permanence.
+				</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}

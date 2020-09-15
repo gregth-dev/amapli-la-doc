@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+{% block page %}
+	<h1 class="text-center">Espace référent</h1>
+	<section id="producteur-accueil">
+		<h2 class="text-center">Consulter un producteur</h2>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<video width="640" height="360" controls>
+					<source src="{{asset('images/videos/referent/producteur/consulter.mp4')}}" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+				<p class="mt-5">
+					Etapes à suivre :
+					<ul>
+						<li><img src="{{asset('images/icons/step1.png')}}" alt="">
+							Cliquez sur l'onglet "Espace Réferent"</li>
+						<li><img src="{{asset('images/icons/step2.png')}}" alt="">
+							Cliquez sur "Gestion des producteurs"</li>
+						<li><img src="{{asset('images/icons/step3.png')}}" alt="">
+							Cliquez sur "Consulter"</li>
+					</ul>
+				</p>
+				<p>
+					Vous pouvez consulter en détail les informations concernant un producteur : coordonnées, référent actuel, produits livrés, etc...
+				</p>
+			</p>
+		</div>
+	</section>
+{% endblock %}
